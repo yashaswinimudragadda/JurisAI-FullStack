@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --color-accent: #7C3AED;
+
+  /* These values are the default (light) */
+  --color-base: #f8f4fc;
+  --color-text-main: #7C3AED;
+}
+
+/* When .dark is on <html>, these variables are swapped automatically */
+.dark {
+  --color-base: #0F172A;
+  --color-text-main: #F8FAFC;
+}
+
+@layer base {
+  body {
+    @apply bg-base text-text-main transition-colors duration-300;
+  }
+}
+
